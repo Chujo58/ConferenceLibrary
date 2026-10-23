@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Conference Library</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<header>
+  <div class="wrap">
+    <h1 id="site-title"></h1>
+    <p id="site-intro"></p>
+    <nav aria-label="Page sections">
+      <a href="#conferences">Conferences</a>
+      <a href="#library">All references</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="conferences" aria-labelledby="c-h">
+    <h2 id="c-h">Conferences</h2>
+    <ul class="confs" id="confs"></ul>
+  </section>
+  <section id="library" aria-labelledby="l-h">
+    <h2 id="l-h">Search all references</h2>
+    <div class="controls">
+      <div><label for="q">Search titles, authors, tags</label><input id="q" type="search" placeholder="e.g. ethnography"></div>
+      <div><label for="fc">Conference</label><select id="fc"></select></div>
+      <div><label for="ft">Type</label><select id="ft"></select></div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="refs" id="refs"></ul>
+  </section>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

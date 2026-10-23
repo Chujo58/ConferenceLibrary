@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Conference</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="conference">
+<header>
+  <div class="wrap">
+    <a class="back" href="index.html">Back to all conferences</a>
+    <h1 id="site-title"></h1>
+    <p id="site-intro"></p>
+  </div>
+</header>
+<main class="wrap">
+  <section id="editions-section" aria-labelledby="e-h">
+    <h2 id="e-h">Editions</h2>
+    <div class="tabs" role="tablist" aria-label="Years" id="tabs"></div>
+    <div class="panel" id="panel" role="tabpanel"></div>
+  </section>
+  <section id="library" aria-labelledby="l-h">
+    <h2 id="l-h">Reference library</h2>
+    <div class="controls">
+      <div><label for="q">Search titles, authors, tags</label><input id="q" type="search" placeholder="e.g. ethnography"></div>
+      <div><label for="fe">Year</label><select id="fe"></select></div>
+      <div><label for="ft">Type</label><select id="ft"></select></div>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="refs" id="refs"></ul>
+  </section>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
